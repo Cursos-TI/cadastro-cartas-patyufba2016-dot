@@ -35,7 +35,7 @@ int main() {
 
     printf("Digite a quantidade de pontos turísticos na cidade :\n");
     scanf("%d", &pontos);
-
+    
 
   // Área para exibição dos dados da cidade
 
