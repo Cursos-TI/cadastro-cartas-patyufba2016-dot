@@ -7,7 +7,7 @@
 int main() {
     printf("Carta Um\n");
   // Área para definição das variáveis para armazenar as propriedades das cidades
-    char estado;
+    char estado [1];
     char codigo[5];
     char cidade;
     int populacao;
@@ -38,6 +38,13 @@ int main() {
     
 
   // Área para exibição dos dados da cidade
+    printf("CARTA 1:\n");
+    printf("ESTADO: %s\n",estado);
+    
+    
+    
+
+
 
 return 0;
 } 
