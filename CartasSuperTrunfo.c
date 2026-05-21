@@ -6,6 +6,7 @@
 
 int main() {
   // Área para definição das variáveis para armazenar as propriedades das cidades
+  printf("olpa, Paty!\n");
 
   // Área para entrada de dados
 
