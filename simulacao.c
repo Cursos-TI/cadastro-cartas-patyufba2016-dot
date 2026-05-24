@@ -17,7 +17,8 @@ int main() {
     float densidade;
     float pibpercapta;
     float superpoder;
-    
+    float inversodensidade;
+        
         //variáveis 2
     char estado1;
     char codigo1[5];
@@ -29,15 +30,21 @@ int main() {
     float densidade1;
     float pibpercapta1;
     float superpoder1;
+    float inversodensidade1;
+
+    //Variáveis de comparação
+    int resultcomppopulacao;
+    int resultcomparea;
+    int resultcomppib;
+    int resultcomppontostur;
+    int resultcompdensidade;
+    int resultcomppibpercapta; 
+    int resultcompsuperpoder;  
     
-  // Área para entrada de dados carta 1
+
+    // Área para entrada de dados carta 1
   printf("--- CADASTRO DA CARTA 1 ---\n");
-    printf("Digite uma letra de A a H para o estado:\n");
-    scanf( "%c", &estado);
-
-    printf("Digite a letra do estado seguida de um número de 01 a 04 :\n");
-    scanf("%s", codigo);
-
+    
     printf("Digite o nome da cidade :\n");  
     scanf("%s", cidade);
 
@@ -53,17 +60,14 @@ int main() {
     printf("Digite a quantidade de pontos turísticos na cidade :\n");
     scanf("%d", &pontos);
 
-    // Cálculo da densidade e pib da primeira carta após receber os dados
+    // Cálculo da densidade, inverso da densidade e pib percapta da primeira carta após receber os dados
     densidade = populacao / area;   
     pibpercapta = pib / populacao; 
+    inversodensidade = 1/densidade;
+    superpoder = populacao+area+pib+pontos+pibpercapta+inversodensidade;;
 
     //Area para entrada de dados carta 2
-    printf("Digite uma letra de A a H:\n");
-    scanf("%c", &estado1);
-
-    printf("Digite a letra do estado seguida de um número de 01 a 04 :\n");
-    scanf("%s", codigo1);
-
+    
     printf("Digite o nome da cidade :\n"); 
     scanf("%s", cidade1);
 
@@ -78,37 +82,36 @@ int main() {
 
     printf("Digite a quantidade de pontos turísticos na cidade :\n");
     scanf("%d", &pontos1); 
-    // Cálculo da densidade e pib da segunda carta após receber os dados   
+    // Cálculo da densidade,inverso da densidade,pib e superpoder percapta da segunda carta após receber os dados   
 
      densidade1 = populacao1 / area1;
      pibpercapta1 = pib1 / populacao1;
+     inversodensidade1 = 1/densidade1;
+     superpoder1 = populacao1+area1+pib1+pontos1+pibpercapta1+inversodensidade1;
 
-  // Área para exibição dos dados da cidade
-    printf("\n=============================\n");
-    printf("CARTA 1:\n");
-    printf("ESTADO: %c\n",estado);
-    printf("CÓDIGO: %s\n",codigo);
-    printf("NOME DA CIDADE: %s\n",cidade);
-    printf("POPULAÇÃO: %d\n",populacao);
-    printf("ÁREA: %f\n",area);
-    printf("PIB: %f\n",pib);
-    printf("Nº PONTOS TURÍSTICOS: %d\n",pontos);
-    printf("Densidade populacional: %2.f hab/km²\n",densidade);
-    printf("Pib percapta: %2.f R$ \n",pibpercapta);
-    
-    printf("CARTA 2:\n");
-    printf("ESTADO: %c\n",estado1);
-    printf("CÓDIGO: %s\n",codigo1);
-    printf("NOME DA CIDADE: %s\n",cidade1);
-    printf("POPULAÇÃO: %d\n",populacao1);
-    printf("ÁREA: %f\n",area1);
-    printf("PIB: %f\n",pib1);
-    printf("Nº PONTOS TURÍSTICOS: %d\n",pontos1);
-    printf("Densidade populacional: %2.f hab/km²\n",densidade1);
-    printf("Pib percapta: %2.f R$ \n",pibpercapta1);
-    
-    
+     //Cálculo de dados comparativos
+
+     resultcomppopulacao = populacao > populacao1;     
+     resultcomparea = area > area1;
+     resultcomppib = pib > pib1;
+     resultcomppontostur = pontos > pontos1;     
+     resultcompdensidade = densidade > densidade1;
+     resultcomppibpercapta = pibpercapta > pibpercapta1;
+     resultcompsuperpoder = superpoder > superpoder1;   
+
+     //Exibição de informações
+     printf("POPULAÇÃO: %d\n",resultcomppopulacao);
+     printf("ÁREA: %d\n",resultcomparea);
+     printf("PIB: %d\n",resultcomppib);
+     printf("PONTOS TURÍSTICOS: %d\n",resultcomppontostur);
+     printf("DENISDADE: %d\n",resultcompdensidade);
+     printf("PIB PERCAPTA: %d\n",resultcomppibpercapta);
+     printf("SUPERPODER: %d\n",resultcompsuperpoder);  
+     
+     
 
 
-    return 0;
+      return 0;
 } 
+
+     
