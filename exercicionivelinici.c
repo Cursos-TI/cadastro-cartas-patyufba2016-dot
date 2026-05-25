@@ -3,23 +3,11 @@
 int main(){
 
 // Definir variaveis
-float temperatura;
-float umidade;
-unsigned int estoque;
+int idade = 20;
+float altura = 1.75;
 
-//entrar com os dados:
-printf("Entre com a temperatura:\n");
-scanf("%f",&temperatura);
+if (idade >=18 && idade<=30 && altura >1.70){ print ("Sua condição está ok! \n");}
+else { printf("Você não atende aos critérios! \n");}
 
-printf("Entre com a umidade:\n");
-scanf("%f",&umidade);
-
-printf("Entre com o estoque:\n");
-scanf("%u",&estoque);
-
-// verificação
-if(temperatura>30)
-
-
-return 0
+return 0;
 }
